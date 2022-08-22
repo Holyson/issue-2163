@@ -1,0 +1,28 @@
+syntax = "v1"
+
+info(
+	title: "type title here"
+	desc: "type desc here"
+	author: "type author here"
+	email: "type email here"
+	version: "type version here"
+)
+
+type NothingReq {
+}
+type CommonResp {
+	Code int64  `json:"code"`
+	Msg  string `json:"msg"`
+}
+
+// -----------------------------	  sys 系统信息		-----------------------------
+@server(
+	jwt: Auth
+	group: sys
+	prefix: weixin
+)
+// 用户
+service WeixinApi {
+	@handler test // 获取首页, ITRA选手列表信息
+	post /test (NothingReq) returns (CommonResp)
+}

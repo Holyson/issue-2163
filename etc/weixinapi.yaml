@@ -1,0 +1,8 @@
+Name: WeixinApi
+Host: 0.0.0.0
+Port: 1112
+
+Auth:
+  AccessSecret: 1qazXSW@simbam-go-zero
+  # second
+  AccessExpire: 99999999999999999
